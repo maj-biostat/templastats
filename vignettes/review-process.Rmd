@@ -1,0 +1,169 @@
+---
+title: "Review Procedure for Biostatistical Documents"
+date: "March 25, 2025"
+author: Mark Jones
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{review-process}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(templastats)
+```
+
+
+## Introduction
+
+This document provides an overview on the review process for biostatistical products, including statistical analysis plans, protocol contributions, trial reports, code, metadata, and data cleaning procedures. 
+The goal is to improve quality, consistency, and traceability within a structured quality management framework.
+
+For code reviews, the github pull request process is still likely preferable to using this process, but some of these templates might provide some useful auxiliary high level information about the initiation of a code review and the updates made. 
+The details of the review specifics are still best managed in git.
+
+## Overview of the Review Process
+
+The review process consists of three main stages:
+
+1. **Review request** – Initiating the review and notifying reviewers.
+2. **Review update notification** – Providing status updates, handling changes, and scheduling discussions if needed.
+3. **Review release notification** – Finalising and approving the reviewed document for use.
+
+Multiple rounds might be needed to get to a satisfactory release status.
+Each stage has an associated template to standardize documentation and ensure evidence of review.
+
+## Review Procedure
+
+The stats products have the following release state transition:
+
+```
+[DRAFT] -> [REVISED DRAFT] -> [RELEASED]
+```
+
++ Draft: Version distributed to reviewers for feedback.
++ Revised Draft: Updated with reviewer comments, may require another round of review.
++ Final Review: Ready for final quality check before release.
++ Released: Approved and archived as the official version.
+
+### **Step 1: Review request**
+
+#### Purpose:
+
+To request a review, assign reviewers, and outline expectations.
+
+#### Actions:
+
+1. Author completes the **Review request** template.
+2. Amongst other things, the request should specify:
+   - Document details (title, type, version, author, deadline)
+   - Reviewers assigned
+   - Scope of the review
+   - Storage location & naming conventions
+   - Whether a review meeting is required
+   The template provides prompts to guide you on what is needed.
+3. The author sends out the request to reviewers via email along with an invite if a meeting is required
+4. The review request document and the products (see earlier note about code) to be reviewed are stored in the appropriate repository with an agreed naming convention.
+
+Note - The reviewers will have been lined up prior to the preparation of the review request document.
+Either way, the reviewers should respond to the  review request by indicating they can complete the review by the deadline or arrange a revised deadline.
+Reviewers can delegate to other reviewers but this change should be noted in the review update notification (see below).
+Following the review request, the reviewers start with the review and, if necessary, meet to discuss the products at the nominated date/time.
+
+#### Storage & Naming:
+
+- Store in a central repository? (e.g., SharePoint, GitHub, internal drive).
+- Use a structured naming convention:
+  ```
+  [DocumentType]_[StudyName]_[Version]_[YYYYMMDD].[ext]
+  Example: AnalysisPlan_Trial123_v1.0_20250325.docx
+  ```
+
+---
+
+### **Step 2: Review update notification**
+
+#### Purpose:
+
+To track progress, handle revisions, and document discussions.
+
+#### Actions:
+
+1. Following the review request (and meeting, if applicable) the reviewers provide feedback via:
+   - Tracked changes (Word documents)
+   - Comments (SharePoint, Google Docs)
+   - GitHub Issues/Pull Requests (for code reviews including when documents written in Rmd/qmd)
+   The review comments should be provided prior to any meetings so that the author has time to consider the feedback.
+2. The author or review coordinator updates the **Review update** template, including:
+   - Summary of the review feedback
+   - Status of the review
+   - Review meeting details (if applicable)
+3. If a meeting is held, key discussion points and outcomes are documented in the **Review update**.
+4. The nominated status update of the document is noted
+5. The update notification and review product is stored in the repository with a new version number (e.g., v1.1, v1.2).
+
+---
+
+### **Step 3: Review release notification**
+
+#### Purpose:
+
+Notification of transition of the product status
+
+#### Actions:
+
+1. The author incorporates the reviewer feedback and sends a review release notification with the updated status of the 
+2. The reviewers ensure that any feedback has been adequately addressed. If anything is missing, the reviewers can request that defects be revisited, which necessitates revision and another update notification. If all feedback has been addressed no further updates are required.
+3. The approved document is stored in the designated repository with the relevant version number (e.g., v2.0, vFinal) and the updated status.
+
+---
+
+## 4. Additional Considerations
+
+### **When is a Review Meeting Required?**
+
+A review meeting should be held if:
+
+- There are significant disagreements among reviewers.
+- Statistical methodologies require further discussion.
+- The document has major regulatory implications.
+
+### **Who Should Be Involved?**
+
+- **Authors** – Responsible for document creation.
+- **Reviewers** – Senior biostatisticians, collaborators, subject matter experts.
+- **Approvers** – Project leads, quality managers, or regulatory officers.
+
+### **Tools & Communication**
+
+- Use **email** for notifications.
+- Store documents in **SharePoint, internal servers, or GitHub**.
+- Use **SharePoint versioning or Git branches** for tracking.
+
+---
+
+## 5. Summary of Templates
+
+| Template | Purpose |
+|----------|---------|
+| **Review request** | Initiates the review process, assigns reviewers, and provides document details. |
+| **Review update notification** | Tracks review progress, logs outcome of review and what is to be done, and includes meeting details. |
+| **Review release notification** | Confirms final approval, status and details of the reviewed document. |
+
+These templates ensure a structured, auditable review process that aligns with quality management standards.
+
+---
+
+## 6. Conclusion
+
+This guidance provides a standardised approach to reviewing biostatistical documents, ensuring consistency, transparency, and regulatory compliance. 
+By following these steps and using the templates, the review process can be effectively managed and documented for future reference.
+
+
