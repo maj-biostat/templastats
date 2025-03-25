@@ -5,7 +5,6 @@
 #' @param pkgname
 #'
 #' @return
-#' @export
 #'
 #' @examples
 .onAttach <- function(libname, pkgname) {

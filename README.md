@@ -33,5 +33,10 @@ in your `.Rprofile` file.
 
 See the vignettes for process guidance.
 
+## Todo 
+
+What things not fully clear on ?
+
+1. State transition for status of products
 
 
