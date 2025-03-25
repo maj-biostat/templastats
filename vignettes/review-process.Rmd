@@ -1,5 +1,5 @@
 ---
-title: "Review Procedure for Biostatistical Documents"
+title: "Review Process for Biostatistical Documents"
 date: "March 25, 2025"
 author: Mark Jones
 output: rmarkdown::html_vignette
