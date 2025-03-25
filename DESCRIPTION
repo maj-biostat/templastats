@@ -14,3 +14,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/maj-biostat/templastats
+BugReports: https://github.com/maj-biostat/templastats/issues
