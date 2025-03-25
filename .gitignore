@@ -1,4 +1,6 @@
 inst/doc
 /doc/
 /Meta/
+/man/
 .Rproj.user
+.DS_Store
