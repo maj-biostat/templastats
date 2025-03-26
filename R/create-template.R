@@ -52,7 +52,7 @@ create_minutes_md <- function(
   }
 
   # create new qmd report based on skeleton
-  file.copy("_extensions/review-request-md/review-request-template.md",
+  file.copy("_extensions/minutes-md/minutes-template.md",
             paste0(file_name, ".md", collapse = ""))
 
   # open the new file in the editor

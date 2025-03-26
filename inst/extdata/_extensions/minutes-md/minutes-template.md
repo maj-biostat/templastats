@@ -6,7 +6,7 @@ title: "Meeting Minutes"
 
 ## Purpose/problem to solve: 
 
-[Having a purpose or problem to solve gives you a focus for the meeting. Whenever things seem to be wandering off or digressing, ask yourself what is the problem we are trying to resolve, e.g. we are here to determine whether the priors adequately reflect our prior belief.]
+[Having a purpose or problem to solve gives you a focus for the meeting. Whenever things seem to be wandering off or digressing, ask yourself what is the purpose or problem we are trying to address, e.g. we are here to present the dsmb with our interim findings, we are here to determine whether the priors adequately reflect our prior belief, etc.]
 
 ## Logistics
 
