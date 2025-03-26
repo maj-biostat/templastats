@@ -1,6 +1,65 @@
 
 
 
+#' Create minute template
+#'
+#' `create_minutes_md` creates a minute template for you to fill in
+#'
+#' This is a helper function to create minutes in a consistent way.
+#' You can use it at any meeting to record the agenda, attendees etc.
+#'
+#' @param file_name The name of the file to save the template shell to.
+#' @param ext_name The name of the specific extension
+#'
+#' @return
+#' @export
+#'
+#' @examples
+create_minutes_md <- function(
+    file_name = NULL,
+    ext_name = "minutes-md") {
+
+  if (is.null(file_name)) {
+    stop("You must provide a valid file_name")
+  }
+
+  # check for available extensions
+  stopifnot("Extension not in package" = ext_name %in% c("minutes-md"))
+
+  # check for existing _extensions directory
+  if(!file.exists("_extensions")) dir.create("_extensions")
+  message("Created '_extensions' folder")
+
+  # create folder
+  if(!file.exists(paste0("_extensions/", ext_name))) dir.create(paste0("_extensions/", ext_name))
+
+  # copy from internals
+  file.copy(
+    from = system.file(paste0("extdata/_extensions/", ext_name), package = "templastats"),
+    to = paste0("_extensions/"),
+    overwrite = TRUE,
+    recursive = TRUE,
+    copy.mode = TRUE
+  )
+
+  # logic check to make sure extension files were moved
+  n_files <- length(dir(paste0("_extensions/", ext_name)))
+
+  if(n_files >= 1){
+    message(paste(ext_name, "was installed to _extensions folder in current working directory."))
+  } else {
+    message("Extension appears not to have been created")
+  }
+
+  # create new qmd report based on skeleton
+  file.copy("_extensions/review-request-md/review-request-template.md",
+            paste0(file_name, ".md", collapse = ""))
+
+  # open the new file in the editor
+  file.edit(paste0(file_name, ".md", collapse = ""))
+
+}
+
 
 
 
